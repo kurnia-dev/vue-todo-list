@@ -1,6 +1,6 @@
 <template>
     <ol>
-        <li v-for="(todo, index) in todoList" :key="index" :id="index">
+        <li v-for="{id, todo} in todoList" :key="id" :id="id">
             <span>{{ todo }}</span>
             <DeleteTodo @todoDeleted="deleteTodo" />
             <EditTodo @todoEdited="saveEditedTodo" />

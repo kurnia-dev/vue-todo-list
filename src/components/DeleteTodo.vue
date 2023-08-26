@@ -10,10 +10,10 @@ export default {
     methods: {
         deleteTodoElement(e) {
             const todoItem = e.target.parentElement
-            const index = todoItem.id
+            const id = todoItem.id
             if (confirm("Mau di hapus nih?")) {
                 todoItem.remove()
-                this.$emit('todoDeleted', index)
+                this.$emit('todoDeleted', id)
             }
             
         }

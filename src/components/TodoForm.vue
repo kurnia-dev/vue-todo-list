@@ -17,7 +17,7 @@ export default {
     methods: {
         addTodo(e) {
             e.preventDefault()
-            this.$emit('newTodoSubmitted', this.inputTodo)
+            this.$emit('newTodoSubmitted', {id: crypto.randomUUID(), newTodo: this.inputTodo})
             e.target.reset()
         },
         setValidity(e) {

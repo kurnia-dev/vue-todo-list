@@ -8,11 +8,11 @@ export default new Vuex.Store({
         todoList: []
     },
     mutations: {
-        todoAdded(state, newTodo) {
-            state.todoList.push(newTodo)
+        todoAdded(state, {id, newTodo}) {
+            state.todoList.push({id, todo: newTodo})
         },
-        todoDeleted(state, index) {
-            state.todoList.splice(index, 1)
+        todoDeleted(state, id) {
+            state.todoList.find(todo => todo.id === id)
         },
         todoEdited(state, props) {
             const { newContent, index } = props
@@ -23,8 +23,8 @@ export default new Vuex.Store({
         addNewTodo({ commit }, newTodo) {
             commit('todoAdded', newTodo)
         },
-        deleteTodo({ commit }, index) {
-            commit('todoDeleted', index)
+        deleteTodo({ commit }, id) {
+            commit('todoDeleted', id)
         },
         saveEditedTodo({ commit }, props) {
             commit('todoEdited', props)
