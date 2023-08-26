@@ -12,7 +12,7 @@ export default new Vuex.Store({
             state.todoList.push({id, todo: newTodo})
         },
         todoDeleted(state, id) {
-            state.todoList.find(todo => todo.id === id)
+            state.todoList = state.todoList.filter(todo => todo.id !== id)
         },
         todoEdited(state, props) {
             const { newContent, index } = props
