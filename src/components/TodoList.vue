@@ -24,6 +24,7 @@ export default {
 </script>
 <style scoped>
 ol {
+    /* This css nesting will not work on Mozilla Firefox 116 and earlier */
     margin: 40px 0;
     counter-reset: number;
 
