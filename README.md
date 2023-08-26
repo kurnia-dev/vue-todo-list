@@ -1,7 +1,13 @@
 # Todo List Vue Js
 
+### Build
+Build from branch [tugas-praktik-4](https://github.com/kurnia-dev/vue-todo-list/tree/tugas-praktik-4)
+
+<br>
+
 ### Deployment
 Using GitHub pages to deploy: https://kurnia-dev.github.io/vue-todo-list  
+
 <br><br>
 Here are the brief steps to deploy a Vue NPM Project to GitHub Pages:  
 <br>
