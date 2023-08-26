@@ -1,15 +1,21 @@
 <template>
-    <button @click="deleteTodo">Hapus</button>
+    <button @click="deleteTodoElement">Hapus</button>
 </template>
 
 <script>
+
 export default {
     name: 'DeleteTodo',
     props: ["todoList"],
     methods: {
-        deleteTodo(e) {
+        deleteTodoElement(e) {
             const todoItem = e.target.parentElement
-            if (confirm("Mau di hapus nih?")) todoItem.remove()
+            const index = todoItem.id
+            if (confirm("Mau di hapus nih?")) {
+                todoItem.remove()
+                this.$emit('todoDeleted', index)
+            }
+            
         }
     }
 }

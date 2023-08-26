@@ -8,10 +8,10 @@
 
 <script>
 // importing Single File Components
-import TodoForm from './components/TodoForm.vue';
-import TodoList from './components/TodoList.vue';
-import FormMessage from './components/FormMessage.vue';
-
+import TodoForm from './components/TodoForm.vue'
+import TodoList from './components/TodoList.vue'
+import FormMessage from './components/FormMessage.vue'
+import { mapActions } from 'vuex'
 
 export default {
   name: 'App',
@@ -21,15 +21,13 @@ export default {
     TodoList,
     FormMessage
   },
-  data() {
-    return {
-      todoList: []
+  computed: {
+    todoList() {
+      return this.$store.state.todoList
     }
   },
   methods: {
-    addNewTodo(newTodo) {
-      this.todoList.push(newTodo)
-    }
+    ...mapActions(['addNewTodo'])
   }
 }
 
