@@ -1,6 +1,7 @@
 <template>
     <form id="todo-form" @submit="addTodo">
-        <input type="text" name="todoInput" placeholder="Ketik tugasmu di sini..." v-model="inputTodo" required @invalid="setValidity" @input="removeValidity"/>
+        <input type="text" name="todoInput" placeholder="Ketik tugasmu di sini..." v-model="inputTodo" required
+            @invalid="setValidity" @input="removeValidity" />
         <button type="submit">Tambahkan</button>
     </form>
 </template>
@@ -21,7 +22,7 @@ export default {
         },
         setValidity(e) {
             e.target.setCustomValidity('Bagian ini ga boleh kosong!')
-        }, 
+        },
         removeValidity(e) {
             // if the input field is filled, remove the custom validity, 
             // otherwise the input field will allways be invalid. 
@@ -30,3 +31,14 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+form {
+    display: flex;
+    gap: 16px;
+
+    & input {
+        width: 100%;
+    }
+}
+</style>
