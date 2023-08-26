@@ -3,7 +3,7 @@
 ### Deployment
 Using GitHub pages to deploy: https://kurnia-dev.github.io/vue-todo-list  
 <br><br>
-This is a brief step to deploy NPM Vue Project to GitHub Pages:  
+Here are the brief steps to deploy a Vue NPM Project to GitHub Pages:  
 <br>
 > Before start, make sure you have remoted your GitHub Repository
 
