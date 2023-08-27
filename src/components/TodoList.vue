@@ -1,7 +1,7 @@
 <template>
     <ol>
-        <li v-for="{id, todo} in todoList" :key="id" :id="id">
-            <span>{{ todo }}</span>
+        <li v-for="{ id, todo } in todoList" :key="id" :id="id">
+            <router-link :to="{ name: 'TodoDetail', params: { id } }">{{ todo }}</router-link>
             <DeleteTodo @todoDeleted="deleteTodo" />
             <EditTodo @todoEdited="saveEditedTodo" />
         </li>
@@ -36,7 +36,8 @@ ol {
         align-items: center;
         margin-bottom: 10px;
 
-        & span {
+        & a {
+            text-decoration: none;
             width: 100%;
             font-size: larger;
             outline: none;
