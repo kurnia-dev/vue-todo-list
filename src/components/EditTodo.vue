@@ -17,7 +17,7 @@ export default {
 
             const todoItem = e.target.parentElement
             const todoContent = todoItem.firstElementChild
-            const index = todoItem.id
+            const id = todoItem.id
 
             todoContent.setAttribute("contentEditable", this.isEditing)
             todoContent.focus()
@@ -25,7 +25,7 @@ export default {
             if (!this.isEditing) {
                 // Will be executed if the button text is "Save"
                 const newContent = todoContent.innerText
-                this.$emit('todoEdited', { newContent, index })
+                this.$emit('todoEdited', { id, newContent })
             } else {
                 // editing mode
                 // set the cursor/caret position to the last character

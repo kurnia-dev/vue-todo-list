@@ -14,9 +14,8 @@ export default new Vuex.Store({
         todoDeleted(state, id) {
             state.todoList = state.todoList.filter(todo => todo.id !== id)
         },
-        todoEdited(state, props) {
-            const { newContent, index } = props
-            state.todoList[index] = newContent
+        todoEdited(state, {id, newContent}) {
+            state.todoList.find(todo => todo.id === id).todo = newContent
         }
     },
     actions: {
