@@ -16,6 +16,9 @@ export default new Vuex.Store({
         },
         todoEdited(state, {id, newContent}) {
             state.todoList.find(todo => todo.id === id).todo = newContent
+        }, 
+        detailEdited(state, { id, detail }) {
+            state.todoList.find(todo => todo.id === id).detail = detail
         }
     },
     actions: {
@@ -27,6 +30,9 @@ export default new Vuex.Store({
         },
         saveEditedTodo({ commit }, props) {
             commit('todoEdited', props)
+        }, 
+        saveDetail({ commit }, props) {
+            commit('detailEdited', props)
         }
     }
 })
