@@ -1,7 +1,7 @@
 # Todo List Vue Js
 
 ### Build
-Build from branch [tugas-praktik-4](https://github.com/kurnia-dev/vue-todo-list/tree/tugas-praktik-4)
+Build from branch [tugas-praktik-5](https://github.com/kurnia-dev/vue-todo-list/tree/tugas-praktik-5) (On Progress)
 
 <br>
 
