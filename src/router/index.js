@@ -12,7 +12,7 @@ const routes = [
     component: Home
   },
   {
-    path: '/detail/id?=:id',
+    path: '/detail/:id',
     name: 'TodoDetail',
     component: TodoDetail, 
     props: true
